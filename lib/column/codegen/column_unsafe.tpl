@@ -25,7 +25,7 @@ package column
 import (
 	"unsafe"
 	"reflect"
-	"github.com/ClickHouse/clickhouse-go/v2/lib/binary"
+	"github.com/sundayfun/clickhouse-go/v2/lib/binary"
 )
 
 

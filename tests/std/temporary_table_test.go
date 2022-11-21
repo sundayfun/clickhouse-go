@@ -21,7 +21,7 @@ import (
 	"database/sql"
 	"testing"
 
-	"github.com/ClickHouse/clickhouse-go/v2"
+	"github.com/sundayfun/clickhouse-go/v2"
 	"github.com/stretchr/testify/assert"
 )
 

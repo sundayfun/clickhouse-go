@@ -26,7 +26,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ClickHouse/clickhouse-go/v2/lib/binary"
+	"github.com/sundayfun/clickhouse-go/v2/lib/binary"
 )
 
 type Tuple struct {

@@ -26,9 +26,9 @@ import (
 	"os"
 	"time"
 
-	"github.com/ClickHouse/clickhouse-go/v2/lib/binary"
-	"github.com/ClickHouse/clickhouse-go/v2/lib/io"
-	"github.com/ClickHouse/clickhouse-go/v2/lib/proto"
+	"github.com/sundayfun/clickhouse-go/v2/lib/binary"
+	"github.com/sundayfun/clickhouse-go/v2/lib/io"
+	"github.com/sundayfun/clickhouse-go/v2/lib/proto"
 )
 
 func dial(ctx context.Context, addr string, num int, opt *Options) (*connect, error) {

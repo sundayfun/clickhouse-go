@@ -23,7 +23,7 @@ import (
 	"io"
 	"time"
 
-	"github.com/ClickHouse/clickhouse-go/v2/lib/proto"
+	"github.com/sundayfun/clickhouse-go/v2/lib/proto"
 )
 
 type onProcess struct {

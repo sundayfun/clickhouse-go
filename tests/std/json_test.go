@@ -19,7 +19,7 @@ package std
 
 import (
 	"encoding/json"
-	"github.com/ClickHouse/clickhouse-go/v2"
+	"github.com/sundayfun/clickhouse-go/v2"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
