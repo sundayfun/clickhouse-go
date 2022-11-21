@@ -390,7 +390,7 @@ func parseMap(name string, mapVal reflect.Value, jCol JSONParent, preFill int) e
 	return iterateMap(mapVal, col, preFill)
 }
 
-func iterateMap(mapVal reflect.Value, col JSONParent, preFill int) error {
+func iterateMap(mapVal reflect.Value, col JSONParent, srcPreFill int) error {
 	// maps can have inconsistent numbers of elements - we must ensure they are consistent in the encoding
 	// two inconsistent options - 1. new - map has new columns 2. massing - map has missing columns
 	// for (1) we need to update previous, for (2) we need to ensure we add a null entry
@@ -409,12 +409,13 @@ func iterateMap(mapVal reflect.Value, col JSONParent, preFill int) error {
 	}
 	addedColumns := make([]string, len(mapVal.MapKeys()), len(mapVal.MapKeys()))
 	newColumn := false
+	preFill := srcPreFill
 	for i, key := range mapVal.MapKeys() {
 		name := key.Interface().(string)
 		if newColumn {
 			// reset as otherwise prefill overflow to other fields. But don't reset if this prefill has come from
 			// a higher level
-			preFill = 0
+			preFill = srcPreFill
 		}
 
 		if _, ok := columnLookup[name]; !ok && len(currentColumns) > 0 {
